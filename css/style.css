@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    background-color: skyblue;
+    font-family: "Times New Roman", serif;
+}
+
+
+.header {
+    background: white;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+
+.logo img {
+    width: 100px;
+    height: auto;
+}
+
+
+nav {
+    background-color: lightyellow;
+    border-radius: 40px;
+    padding: 12px 100px;
+}
+
+.logout-text {
+    background-color: skyblue;
+    border-radius: 40px;
+    padding: 12px 20px;
+    font-size: 20px;
+    
+
+}
+nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+nav li {
+    transition: transform 0.3s;
+}
+
+nav li:hover {
+    transform: scale(1.1);
+}
+
+nav a {
+    text-decoration: none;
+    color: blue;
+    font-size: 24px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: black;
+}
+
+.box{
+    width:90%;
+    margin:20px auto;
+    background:white;
+    border:1px solid gray;
+    padding:15px;
+}
+
+.box h2{
+    color:darkblue;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    background:steelblue;
+    color:white;
+    padding:10px;
+    border:1px solid gray;
+}
+
+td{
+    padding:10px;
+    border:1px solid gray;
+}
+
+footer{
+    background:lightgray;
+    text-align:center;
+    padding:1px;
+    margin-top:20px;
+}
