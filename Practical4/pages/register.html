@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub - Register</title>
+    <link rel="stylesheet" href="../css/register.css">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="logo">
+            <img src="../images/charusat.png" alt="CHARUSAT Logo">
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="attendance.html">Attendance</a></li>
+                <li><a href="assignment.html">Assignment</a></li>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="result.html">Result</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="logout-text">
+            <a href="login.html">Logout</a>
+        </div>
+
+    </header>
+
+ 
+    <main>
+
+        <section>
+
+            <h2>Student Registration</h2>
+
+            <form action="#" method="post">
+
+                <p>
+                    <label for="fullname">Full Name:</label><br>
+                    <input type="text" id="fullname" name="fullname" required>
+                </p>
+
+                <p>
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required>
+                </p>
+
+                <p>
+                    <label for="mobile">Mobile Number:</label><br>
+                    <input type="tel" id="mobile" name="mobile" required>
+                </p>
+
+                <p>
+                    <label for="course">Course:</label><br>
+                    <select id="course" name="course">
+                        <option>BCA</option>
+                        <option>BSc IT</option>
+                        <option>BCom</option>
+                        <option>BBA</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="password">Password:</label><br>
+                    <input type="password" id="password" name="password" required>
+                </p>
+
+                <p>
+                    <label for="confirm">Confirm Password:</label><br>
+                    <input type="password" id="confirm" name="confirm" required>
+                </p>
+
+                <button type="submit">Register</button>
+                <button type="reset">Reset</button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+ 
+    <footer>
+        <p>&copy; 2026 StudentHub. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
