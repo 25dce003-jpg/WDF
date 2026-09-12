@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    min-height: 100vh;
+
+    background: linear-gradient(
+        135deg,
+        #87ceeb 0%,
+        #dff6ff 100%
+    );
+
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    color: #202124;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+    background: rgba(255, 255, 255, 0.97);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 10px 25px;
+
+    gap: 25px;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo {
+    display: flex;
+
+    align-items: center;
+
+    flex-shrink: 0;
+}
+
+
+.logo img {
+    width: 100px;
+
+    height: auto;
+
+    display: block;
+
+    transition: transform 0.3s ease;
+}
+
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+nav {
+    flex: 1;
+
+    background: #fffde7;
+
+    border-radius: 40px;
+
+    padding: 10px 18px;
+
+    margin: 0 10px;
+
+    border: 1px solid rgba(10, 29, 143, 0.08);
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+
+nav ul {
+    margin: 0;
+
+    padding: 0;
+
+    display: flex;
+
+    justify-content: space-evenly;
+
+    align-items: center;
+
+    list-style: none;
+
+    gap: 10px;
+}
+
+
+nav li {
+    position: relative;
+}
+
+
+nav a {
+    display: block;
+
+    text-decoration: none;
+
+    color: #0a1d8f;
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    padding: 10px 12px;
+
+    border-radius: 20px;
+
+    transition:
+        color 0.3s ease,
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+nav a:hover {
+    color: white;
+
+    background: #0a1d8f;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   LOGOUT
+========================================= */
+
+.logout-text {
+    background: #87ceeb;
+
+    border-radius: 30px;
+
+    padding: 11px 22px;
+
+    font-size: 17px;
+
+    white-space: nowrap;
+
+    text-align: center;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.logout-text:hover {
+    background: #0a1d8f;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+.logout-text a {
+    color: #0a1d8f;
+
+    text-decoration: none;
+
+    font-weight: 700;
+}
+
+
+.logout-text:hover a {
+    color: white;
+}
+
+
+.logo img {
+    width: 100px;
+    height: auto;
+    display: block;
+}
+
+nav {
+    flex: 1;
+    background-color: lightyellow;
+    border-radius: 40px;
+    padding: 12px 20px;
+    margin: 0 20px;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+}
+
+nav li {
+    transition: transform 0.3s;
+}
+
+nav li:hover {
+    transform: scale(1.1);
+}
+
+nav a {
+    text-decoration: none;
+    color: blue;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: black;
+}
+
+
+.logout-text {
+    background-color: skyblue;
+    border-radius: 40px;
+    padding: 12px 20px;
+    font-size: 20px;
+    white-space: nowrap;
+    text-align: center;
+}
