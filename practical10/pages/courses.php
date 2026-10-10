@@ -1,0 +1,256 @@
+<?php
+require_once "session_check.php";
+
+if ($_SESSION["role"] !== "student") {
+    http_response_code(403);
+    exit("Unauthorized access.");
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Courses</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- Header -->
+
+    <header class="header">
+
+
+        <!-- Logo -->
+
+        <div class="logo">
+
+            <img
+                src="../images/charusat.png"
+                alt="CHARUSAT Logo">
+
+        </div>
+
+
+
+        <!-- Navigation -->
+
+        <nav>
+
+            <ul>
+
+                <li>
+                    <a href="profile.php">
+                        Profile
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="attendance.php">
+                        Attendance
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="assignment.php">
+                        Assignment
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="events.php">
+                        Events
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="event_register.php">
+                        Event Registration
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="index.php">
+                        Dashboard
+                    </a>
+                </li>
+
+
+
+                <li>
+                    <a href="courses.php">
+                        Courses
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="contact.php">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+
+
+        <!-- Login -->
+
+        <div class="logout-text">
+
+            <a href="login.php">
+                Logout
+            </a>
+
+        </div>
+
+
+    </header>
+
+
+
+    <!-- Courses -->
+
+    <h3>
+        Courses
+    </h3>
+
+
+
+    <label for="Courses">
+        Select
+    </label>
+
+
+    <select
+        name="Courses"
+        id="Courses"
+        required>
+
+        <option value="---Select---">
+            ---Select---
+        </option>
+
+        <option value="c++">
+            C++
+        </option>
+
+        <option value="c">
+            C
+        </option>
+
+        <option value="Java">
+            Java
+        </option>
+
+        <option value="Java Script">
+            Java Script
+        </option>
+
+        <option value="Python">
+            Python
+        </option>
+
+        <option value="html">
+            HTML
+        </option>
+
+        <option value="php">
+            PHP
+        </option>
+
+        <option value="CSS">
+            CSS
+        </option>
+
+    </select>
+
+
+
+    <br>
+    <br>
+
+
+
+    <a href="index.html">
+
+        <input
+            type="submit"
+            value="Submit">
+
+    </a>
+
+
+
+    <!-- Course Cards -->
+
+    <div class="cards">
+
+
+        <div class="card">
+
+            <h3>
+                Web Designing
+            </h3>
+
+            <p>
+                Basics of HTML, CSS, and JavaScript
+            </p>
+
+        </div>
+
+
+
+        <div class="card">
+
+            <h3>
+                Data Structure
+            </h3>
+
+            <p>
+                Array, Linked list, Time &amp; space complexity
+            </p>
+
+        </div>
+
+
+
+        <div class="card">
+
+            <h3>
+                OOP
+            </h3>
+
+            <p>
+                Logic building and simple applications
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+</body>
+
+</html>
