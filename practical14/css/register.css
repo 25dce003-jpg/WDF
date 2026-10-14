@@ -1,0 +1,549 @@
+
+/* =========================================
+   GLOBAL RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #87ceeb 0%, #dff6ff 100%);
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #202124;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+    background: rgba(255, 255, 255, 0.97);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 25px;
+    gap: 25px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+nav {
+    flex: 1;
+    background: #fffde7;
+    border-radius: 40px;
+    padding: 10px 18px;
+    margin: 0 10px;
+    border: 1px solid rgba(10, 29, 143, 0.08);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    gap: 10px;
+}
+
+nav li {
+    position: relative;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    color: #0a1d8f;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 10px 12px;
+    border-radius: 20px;
+    transition: color 0.3s ease,
+                background 0.3s ease,
+                transform 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+    color: white;
+    background: #0a1d8f;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   LOGOUT
+========================================= */
+
+.logout-text {
+    background: #87ceeb;
+    border-radius: 30px;
+    padding: 11px 22px;
+    font-size: 17px;
+    white-space: nowrap;
+    text-align: center;
+    transition: background 0.3s ease,
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.logout-text:hover {
+    background: #0a1d8f;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+.logout-text a {
+    color: #0a1d8f;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.logout-text:hover a {
+    color: white;
+}
+
+
+/* =========================================
+   MAIN SECTION
+========================================= */
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 50px 20px;
+}
+
+
+/* =========================================
+   REGISTRATION CARD
+========================================= */
+
+main section {
+    width: 100%;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.97);
+    padding: 35px 45px;
+    border-radius: 18px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(10, 29, 143, 0.08);
+}
+
+
+/* =========================================
+   FORM TITLE
+========================================= */
+
+main h2 {
+    text-align: center;
+    color: #0a1d8f;
+    font-size: 30px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+main h2::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 4px;
+    background: #87ceeb;
+    border-radius: 5px;
+    margin: 10px auto 0;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+form {
+    width: 100%;
+}
+
+form p {
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   LABELS
+========================================= */
+
+label {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: #202124;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   INPUTS AND SELECT
+========================================= */
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+select {
+    width: 100%;
+    height: 48px;
+    padding: 12px 14px;
+    border: 2px solid #d6dbe1;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #202124;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.25s ease,
+                box-shadow 0.25s ease,
+                background 0.25s ease;
+}
+
+
+/* Placeholder */
+
+input::placeholder {
+    color: #8a8f98;
+}
+
+
+/* Focus effect */
+
+input:focus,
+select:focus {
+    border-color: #0a1d8f;
+    box-shadow: 0 0 0 4px rgba(10, 29, 143, 0.12);
+    background: #fafdff;
+}
+
+
+/* Valid input */
+
+input:valid:not(:placeholder-shown),
+select:valid {
+    border-color: #38a169;
+}
+
+
+/* Invalid input */
+
+input:invalid:not(:placeholder-shown) {
+    border-color: #e53e3e;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+button {
+    border: none;
+    border-radius: 10px;
+    padding: 13px 25px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease,
+                background 0.2s ease;
+}
+
+
+/* Register button */
+
+button[type="submit"] {
+    background: #0a1d8f;
+    color: white;
+    width: 30%;
+    margin-right: 10px;
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+    background: #071568;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(10, 29, 143, 0.25);
+}
+
+
+/* Reset button */
+
+button[type="reset"] {
+    background: #e9eef3;
+    color: #202124;
+    width: 35%;
+}
+
+button[type="reset"]:hover,
+button[type="reset"]:focus {
+    background: #d7dde3;
+    transform: translateY(-2px);
+}
+
+
+/* Keyboard accessibility */
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible {
+    outline: 3px solid #ff9800;
+    outline-offset: 2px;
+}
+
+
+/* =========================================
+   VALIDATION ERROR MESSAGE
+========================================= */
+
+/*
+   These classes can be used by JavaScript.
+
+   Example:
+   <small class="error-message">
+       Please enter a valid email.
+   </small>
+*/
+
+.error-message {
+    display: block;
+    color: #d32f2f;
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 6px;
+}
+
+
+/* Error input */
+
+.input-error {
+    border-color: #d32f2f !important;
+    background: #fff7f7 !important;
+}
+
+
+/* Success input */
+
+.input-success {
+    border-color: #2e7d32 !important;
+    background: #f7fff8 !important;
+}
+
+
+/* =========================================
+   PASSWORD STRENGTH
+========================================= */
+
+.password-strength {
+    margin-top: 8px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.password-strength.weak {
+    color: #d32f2f;
+}
+
+.password-strength.medium {
+    color: #e69500;
+}
+
+.password-strength.strong {
+    color: #2e7d32;
+}
+
+
+/* Password strength bar */
+
+.strength-bar {
+    width: 100%;
+    height: 7px;
+    margin-top: 6px;
+    background: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.strength-bar span {
+    display: block;
+    height: 100%;
+    width: 0;
+    border-radius: 10px;
+    transition: width 0.3s ease;
+}
+
+
+/* =========================================
+   SUCCESS MESSAGE
+========================================= */
+
+.success-message {
+    display: block;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #a5d6a7;
+    font-weight: 600;
+    text-align: center;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    background: white;
+    color: #555;
+    text-align: center;
+    padding: 18px 10px;
+    margin-top: auto;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .header {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav {
+        order: 3;
+        flex-basis: 100%;
+        margin: 5px 0;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    main {
+        padding: 30px 15px;
+    }
+
+    main section {
+        padding: 25px 20px;
+    }
+
+    main h2 {
+        font-size: 25px;
+    }
+
+    .logo img {
+        width: 85px;
+    }
+
+    nav ul {
+        gap: 5px;
+    }
+
+    nav a {
+        font-size: 14px;
+        padding: 8px 9px;
+    }
+
+    .logout-text {
+        font-size: 14px;
+        padding: 9px 15px;
+    }
+}
+
+
+@media (max-width: 450px) {
+
+    .header {
+        padding: 10px;
+        gap: 10px;
+    }
+
+    nav {
+        border-radius: 15px;
+        padding: 8px;
+    }
+
+    nav ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+    }
+
+    nav a {
+        text-align: center;
+        font-size: 13px;
+    }
+
+    main section {
+        padding: 20px 15px;
+    }
+
+    main h2 {
+        font-size: 23px;
+    }
+
+    button[type="submit"],
+    button[type="reset"] {
+        width: 100%;
+        margin: 5px 0;
+    }
+}

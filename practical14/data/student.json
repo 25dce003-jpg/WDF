@@ -1,0 +1,29 @@
+[
+    {
+        "studentID": "25DCE001",
+        "name": "Tarang",
+        "course": "Computer Engineering",
+        "semester": 3,
+        "email": "tarang@gmail.com",
+        "mobile": "9876543210",
+        "university": "CHARUSAT"
+    },
+    {
+        "studentID": "25DCE002",
+        "name": "Nehang",
+        "course": "Computer Engineering",
+        "semester": 3,
+        "email": "nehang@gmail.com",
+        "mobile": "9876543211",
+        "university": "CHARUSAT"
+    },
+    {
+        "studentID": "25DCE003",
+        "name": "Aniket",
+        "course": "Computer Engineering",
+        "semester": 3,
+        "email": "aniket@gmail.com",
+        "mobile": "9909835906",
+        "university": "CHARUSAT"
+    }
+]
